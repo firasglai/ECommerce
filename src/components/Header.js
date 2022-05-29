@@ -51,7 +51,7 @@ const Header = () => {
         <>
             <Navbar bg="dark" variant="dark" style={{ height: "60px" }}>
                 <Container>
-                    <NavLink to="/" className="text-decoration-none text-light mx-3">Add to Cart</NavLink>
+                    
                     <Nav className="me-auto">
                         <NavLink to="/" className="text-decoration-none text-light">Home</NavLink>
                     </Nav>
@@ -86,7 +86,10 @@ const Header = () => {
                                 <thead>
                                     <tr>
                                         <th>Photo</th>
-                                        <th>Restaurant Name</th>
+                                        <th>Watch Name</th>
+                                        <NavLink to={`/confirmation`}>
+                                        <th><button>Confirm</button></th>
+                                        </NavLink>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -102,7 +105,7 @@ const Header = () => {
                                                         </td>
                                                         <td>
                                                             <p>{e.rname}</p>
-                                                            <p>Price : ₹{e.price}</p>
+                                                            <p>Price : TND{e.price}</p>
                                                             <p>Quantity : {e.qnty}</p>
                                                             <p style={{color:"red",fontSize:20,cursor:"pointer"}} onClick={()=>dlt(e.id)}>
                                                                 <i className='fas fa-trash smalltrash'></i>
@@ -112,23 +115,27 @@ const Header = () => {
                                                         <td className='mt-5'style={{color:"red",fontSize:20,cursor:"pointer"}}  onClick={()=>dlt(e.id)}>
                                                         <i className='fas fa-trash largetrash'></i>
                                                         </td>
+                                                        
                                                     </tr>
+                                                    
                                                 </>
                                             )
                                         })
                                     }
-                                    <p className='text-center'>Total :₹ {price}</p>
+                                    <p className='text-center'>Total :TND {price}</p>
                                 </tbody>
                             </Table>
                         </div>:
-                        
+                     
                    <div className='card_details d-flex justify-content-center align-items-center' style={{width:"24rem",padding:10,position:"relative"}}>
                     <i className='fas fa-close smallclose'
                     onClick={handleClose}
                      style={{position:"absolute",top:2,right:20,fontSize:23,cursor:"pointer"}}></i>
                     <p style={{fontSize:22}}>Your carts is empty</p>
                     <img src="./cart.gif" alt="" className='emptycart_img' style={{width:"5rem",padding:10}} />
+                    
                    </div>
+                      
                     }
 
                 </Menu>

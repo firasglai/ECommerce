@@ -1,3 +1,5 @@
+
+// nzid iteam
 export const ADD = (item) => {
     return {
         type: "ADD_CART",
@@ -5,7 +7,7 @@ export const ADD = (item) => {
     }
 }
 
-// remove iteams
+// na7i iteams
 export const DLT = (id) => {
     return {
         type: "RMV_CART",
@@ -13,7 +15,7 @@ export const DLT = (id) => {
     }
 }
 
-// remove individual iteam
+// na7i ka3ba iteam
 
 export const REMOVE = (iteam) => {
     return {
