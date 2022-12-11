@@ -3,7 +3,7 @@ import { cartreducer } from "./reducer";
 
 
 const rootred = combineReducers({
-    cartreducer
+    cartreducer 
 });
 
 

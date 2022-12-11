@@ -15,7 +15,7 @@ export const cartreducer = (state = INIT_STATE, action) => {
                 ...state,
                 carts:[...state.carts]
             }
-        }else{
+        }else{ 
             const temp = {...action.payload,qnty:1}
              return {
                 ...state,
